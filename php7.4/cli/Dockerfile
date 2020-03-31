@@ -94,6 +94,7 @@ RUN set -ex; \
 	wp --allow-root --version
 
 COPY docker-entrypoint.sh /usr/local/bin/
+COPY uploads.ini /usr/local/etc/php/conf.d/
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 USER www-data
